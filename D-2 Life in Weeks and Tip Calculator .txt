@@ -1,0 +1,27 @@
+
+#Life IN Weeks
+
+
+age=input("What is Your Current Age\n")
+age_as_int=int(age)
+ageYouWant=input("How much Age you want to live ?\n")
+age_want=int(ageYouWant)
+remaining_age=age_want-age_as_int
+remaining_days=remaining_age*365
+remaining_mnt=remaining_age*12
+remaining_weeks=remaining_age*52
+print(f"You have {remaining_days} days,{remaining_weeks} weeks and {remaining_mnt} months")
+
+
+
+#Tip Calculator
+
+
+print("Welcome to the tip Calculator.\n")
+bill=float(input("What was the total bill ?\n"))
+tip=int(input("What percentage tip would you like to give ? # 10% , 15% etc.\n"))
+people=int(input("How many people you split the bill ?\n"))
+bill_with_tip =bill * ( 1 + tip / 100)
+print("Total bill with tip is "+str(bill_with_tip))
+bill_per_persion= bill_with_tip / people;
+print("Per person bill is " +str(bill_per_persion))
