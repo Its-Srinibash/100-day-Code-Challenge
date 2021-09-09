@@ -1,0 +1,66 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+mychoose=int(input('''Choose one 
+                      for 'Rock' press 0
+                      for 'Paper' press 1
+                      for 'Scissors' press 2\n
+                      '''))
+
+if mychoose ==0:
+  print(rock)
+elif mychoose ==1:
+  print(paper)
+elif mychoose ==2:
+  print(scissors)
+
+hand=random.randint(0,2)
+print(f"Computer Choose {hand}")
+
+if hand ==0:
+  print(rock)
+elif hand ==1:
+  print(paper)
+elif hand ==2:
+  print(scissors)
+
+if mychoose ==2 and hand ==1:
+  print("You Win")
+elif mychoose ==2 and hand ==0:
+  print("Computer Win")
+elif mychoose ==1 and hand ==0:
+  print("You Win")
+elif mychoose ==1 and hand ==2:
+  print("Computer Win")
+elif mychoose ==0 and hand ==1:
+  print("Computer Win")
+elif mychoose ==0 and hand ==2:
+  print("You Win")
+
+if mychoose ==hand:
+  print("Draw")
